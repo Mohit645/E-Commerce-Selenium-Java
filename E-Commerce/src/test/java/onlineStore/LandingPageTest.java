@@ -25,15 +25,15 @@ public class LandingPageTest extends WebDriverUtils{
 	}
 	
 	@Test
-	public void validateTitle()
+	public void validateTitle() throws IOException
 	{
-		Assert.assertEquals(lp.returnTitle(), "My Store");
+		Assert.assertEquals(lp.returnTitle(), printExcelData(0, "LandingPage", driver));
 	}
 	
 	@AfterTest
 	public void tearDown()
 	{
-		// driver.close();
+		 driver.close();
 	}
 	
 

@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -43,10 +46,15 @@ public class WebDriverUtils {
 		return driver;
 	}
 
-	public static void main(String[] args) {
-
-		// System.out.println(System.getProperty("user.dir"));
-
+	public String printExcelData(int rowNum, String SheetName, WebDriver d) throws IOException
+	{
+		String excelLoc= System.getProperty("user.dir")+"\\src\\main\\java\\utilities\\excelFile.xlsx";
+		FileInputStream fis = new FileInputStream(excelLoc);
+		XSSFWorkbook wb = new XSSFWorkbook(fis);
+		XSSFSheet sh = wb.getSheet(SheetName);
+		Row row1 = sh.getRow(rowNum);
+		return row1.getCell(0).getStringCellValue();
+		
 	}
 
 }

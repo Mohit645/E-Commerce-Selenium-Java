@@ -2,10 +2,8 @@ package onlineStorePages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.AfterTest;
+
 
 public class ContactUsPage {
 	
@@ -13,6 +11,7 @@ public class ContactUsPage {
 	
 	String expectedSuccessMessage = "Your message has been successfully sent to our team.";
 	String expectedCustomerServiceText = "CUSTOMER SERVICE - CONTACT US";
+	
 
 	public ContactUsPage(WebDriver driver)
 	{

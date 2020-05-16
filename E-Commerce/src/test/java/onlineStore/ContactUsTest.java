@@ -21,16 +21,18 @@ public class ContactUsTest extends WebDriverUtils {
 		cp = new ContactUsPage(driver);
 		cp.clickContactUs();
 	}
+	
+	
 
 	@Test(priority = 1)
-	public void validateCustomerServiceText()
+	public void validateCustomerServiceText() throws IOException
 	{
 		
-		Assert.assertEquals(cp.getActualCustomerServiceText(), cp.getExpectedCustomerServiceText());
+		Assert.assertEquals(cp.getActualCustomerServiceText(), printExcelData(0, "ContactPage", driver));
 	}
 	
 	@Test(dependsOnMethods = { "validateCustomerServiceText" })
-	public void sendAMessage() {
+	public void sendAMessage() throws IOException {
 	//	cp.clickContactUs();
 		cp.selectHeading();
 		cp.provideOrderReference();
@@ -39,7 +41,7 @@ public class ContactUsTest extends WebDriverUtils {
 		cp.fileUpload();
 		cp.clickSend();
 
-		Assert.assertEquals(cp.getActualSuccessMessage(), cp.getExpectedSuccessMessage());
+		Assert.assertEquals(cp.getActualSuccessMessage(), printExcelData(1, "ContactPage", driver));
 	}
 
 	@AfterTest
