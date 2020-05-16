@@ -12,6 +12,7 @@ public class ContactUsPage {
 	public WebDriver driver;
 	
 	String expectedSuccessMessage = "Your message has been successfully sent to our team.";
+	String expectedCustomerServiceText = "CUSTOMER SERVICE - CONTACT US";
 
 	public ContactUsPage(WebDriver driver)
 	{
@@ -30,8 +31,12 @@ public class ContactUsPage {
 	By sendButton = By.xpath("//button[@id='submitMessage']");
 
 	By message = By.xpath("//textarea[@id='message']");
+	
+	By fileUploadButton = By.xpath("//input[@id='fileUpload']");
 
 	By successMessage = By.cssSelector("p[class*='alert']");
+	
+	By customerService = By.xpath("//div[@id='center_column']/h1");
 	
 	public void selectHeading()
 	{
@@ -71,6 +76,22 @@ public class ContactUsPage {
 	public void clickContactUs()
 	{
 		driver.findElement(contactUS).click();
+	}
+	
+	public void fileUpload()
+	{
+		driver.findElement(fileUploadButton).sendKeys("C:\\Users\\Mohit\\demo.txt");
+	}
+	
+	public String getActualCustomerServiceText()
+	{
+		String actualText= driver.findElement(customerService).getText();
+		return actualText.toUpperCase();
+	}
+	
+	public String getExpectedCustomerServiceText()
+	{
+		return expectedCustomerServiceText;
 	}
 	
 

@@ -17,26 +17,33 @@ public class ContactUsTest extends WebDriverUtils {
 
 	@BeforeTest
 	public void setUp() throws IOException {
-		driver = getWebdriver();	
+		driver = getWebdriver();
 		cp = new ContactUsPage(driver);
-		System.out.println("BeforeTest");
+		cp.clickContactUs();
 	}
 
-	@Test
+	@Test(priority = 1)
+	public void validateCustomerServiceText()
+	{
+		
+		Assert.assertEquals(cp.getActualCustomerServiceText(), cp.getExpectedCustomerServiceText());
+	}
+	
+	@Test(dependsOnMethods = { "validateCustomerServiceText" })
 	public void sendAMessage() {
-		cp.clickContactUs();
+	//	cp.clickContactUs();
 		cp.selectHeading();
 		cp.provideOrderReference();
 		cp.enterEmail();
 		cp.typeMessage();
+		cp.fileUpload();
 		cp.clickSend();
 
 		Assert.assertEquals(cp.getActualSuccessMessage(), cp.getExpectedSuccessMessage());
 	}
-	
+
 	@AfterTest
-	public void tearDown()
-	{
+	public void tearDown() {
 		driver.close();
 	}
 

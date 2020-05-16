@@ -6,6 +6,7 @@
       <class name="onlineStore.ContactUsTest">
         <methods>
           <include name="setUp"/>
+          <include name="validateCustomerServiceText"/>
           <include name="sendAMessage"/>
           <include name="tearDown"/>
         </methods>
