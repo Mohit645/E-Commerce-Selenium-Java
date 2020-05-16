@@ -1,4 +1,4 @@
-package onlineStore;
+package onlineStorePages;
 
 /**
  * Hello world!
