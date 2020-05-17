@@ -1,49 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="35820" started-at="2020-05-17T07:57:42 IST" finished-at="2020-05-17T07:58:17 IST">
+  <suite name="Default suite" duration-ms="20204" started-at="2020-05-18T02:50:11 IST" finished-at="2020-05-18T02:50:31 IST">
     <groups>
     </groups>
-    <test name="Test_LandingPage" duration-ms="18041" started-at="2020-05-17T07:57:42 IST" finished-at="2020-05-17T07:58:00 IST">
-      <class name="onlineStore.LandingPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:onlineStore.LandingPageTest@57e1b0c]" name="setUp" is-config="true" duration-ms="14392" started-at="2020-05-17T07:57:42 IST" finished-at="2020-05-17T07:57:56 IST">
+    <test name="Default test" duration-ms="20204" started-at="2020-05-18T02:50:11 IST" finished-at="2020-05-18T02:50:31 IST">
+      <class name="onlineStore.SignInPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:onlineStore.SignInPageTest@57e1b0c]" name="setUp" is-config="true" duration-ms="17094" started-at="2020-05-18T02:50:11 IST" finished-at="2020-05-18T02:50:28 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validatePopularProductList()[pri:0, instance:onlineStore.LandingPageTest@57e1b0c]" name="validatePopularProductList" duration-ms="481" started-at="2020-05-17T07:57:56 IST" finished-at="2020-05-17T07:57:57 IST">
+        <test-method status="PASS" signature="checkSignInPageLanding()[pri:0, instance:onlineStore.SignInPageTest@57e1b0c]" name="checkSignInPageLanding" duration-ms="50" started-at="2020-05-18T02:50:28 IST" finished-at="2020-05-18T02:50:28 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validatePopularProductList -->
-        <test-method status="PASS" signature="validateTitle()[pri:0, instance:onlineStore.LandingPageTest@57e1b0c]" name="validateTitle" duration-ms="1010" started-at="2020-05-17T07:57:57 IST" finished-at="2020-05-17T07:57:58 IST">
+        </test-method> <!-- checkSignInPageLanding -->
+        <test-method status="PASS" signature="validateExistingAccountAlert()[pri:0, instance:onlineStore.SignInPageTest@57e1b0c]" name="validateExistingAccountAlert" duration-ms="827" started-at="2020-05-18T02:50:28 IST" finished-at="2020-05-18T02:50:29 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateTitle -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:onlineStore.LandingPageTest@57e1b0c]" name="tearDown" is-config="true" duration-ms="2090" started-at="2020-05-17T07:57:58 IST" finished-at="2020-05-17T07:58:00 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- onlineStore.LandingPageTest -->
-    </test> <!-- Test_LandingPage -->
-    <test name="Test_ContactUsPage" duration-ms="17734" started-at="2020-05-17T07:58:00 IST" finished-at="2020-05-17T07:58:17 IST">
-      <class name="onlineStore.ContactUsTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:onlineStore.ContactUsTest@42f93a98]" name="setUp" is-config="true" duration-ms="13653" started-at="2020-05-17T07:58:00 IST" finished-at="2020-05-17T07:58:13 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateCustomerServiceText()[pri:1, instance:onlineStore.ContactUsTest@42f93a98]" name="validateCustomerServiceText" duration-ms="83" started-at="2020-05-17T07:58:13 IST" finished-at="2020-05-17T07:58:13 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateCustomerServiceText -->
-        <test-method status="PASS" signature="sendAMessage()[pri:0, instance:onlineStore.ContactUsTest@42f93a98]" name="sendAMessage" duration-ms="1995" started-at="2020-05-17T07:58:13 IST" depends-on-methods="onlineStore.ContactUsTest.validateCustomerServiceText" finished-at="2020-05-17T07:58:15 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sendAMessage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:onlineStore.ContactUsTest@42f93a98]" name="tearDown" is-config="true" duration-ms="1989" started-at="2020-05-17T07:58:15 IST" finished-at="2020-05-17T07:58:17 IST">
+        </test-method> <!-- validateExistingAccountAlert -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:onlineStore.SignInPageTest@57e1b0c]" name="tearDown" is-config="true" duration-ms="2121" started-at="2020-05-18T02:50:29 IST" finished-at="2020-05-18T02:50:31 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- onlineStore.ContactUsTest -->
-    </test> <!-- Test_ContactUsPage -->
-  </suite> <!-- Suite -->
+      </class> <!-- onlineStore.SignInPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
