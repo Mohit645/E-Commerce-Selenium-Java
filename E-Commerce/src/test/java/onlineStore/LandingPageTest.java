@@ -30,6 +30,12 @@ public class LandingPageTest extends WebDriverUtils{
 		Assert.assertEquals(lp.returnTitle(), printExcelData(0, "LandingPage", driver));
 	}
 	
+	@Test
+	public void validatePopularProductList()
+	{
+		Assert.assertEquals(lp.getPopularProductList(), lp.getExpectedPopularProductList());
+	}
+	
 	@AfterTest
 	public void tearDown()
 	{

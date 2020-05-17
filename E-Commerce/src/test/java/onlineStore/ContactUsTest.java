@@ -16,7 +16,7 @@ public class ContactUsTest extends WebDriverUtils {
 	ContactUsPage cp;
 
 	@BeforeTest
-	public void setUp() throws IOException {
+	public void setUp() throws IOException{
 		driver = getWebdriver();
 		cp = new ContactUsPage(driver);
 		cp.clickContactUs();
